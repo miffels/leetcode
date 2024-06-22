@@ -16,7 +16,7 @@ class Solution:
             i = len(chars)
             max = i if i > max else max
         return max
-        
+
 solution = Solution()
 
 print(solution.lengthOfLongestSubstring("abcabcbb"))    #3

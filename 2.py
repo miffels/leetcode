@@ -7,7 +7,7 @@ class ListNode:
         self.val = val
         self.next = next
 
-    def __repr__(self): 
+    def __repr__(self):
         return "%d" % self.val + (self.next.__repr__() if self.next is not None else "")
 
 class Solution:
@@ -25,13 +25,13 @@ class Solution:
             carr = d // radix
             l1 = l1.next if l1 is not None else None
             l2 = l2.next if l2 is not None else None
-        
+
 
         for d in reversed(sum):
             res = ListNode(d, res)
 
         return res
-    
+
 solution = Solution()
 
 def makeList(nums: list[int]) -> Optional[ListNode]:
