@@ -1,6 +1,9 @@
+from typing import Optional
+
+
 class Solution:
 
-    def twoSum(self, nums: list[int], target: int) -> list[int]:
+    def twoSum(self, nums: list[int], target: int) -> Optional[list[int]]:
         # build index
         table: dict[int, list[int]] = {}
         for i, n in enumerate(nums):
