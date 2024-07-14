@@ -1,14 +1,7 @@
 # Definition for singly-linked list.
 from typing import Optional
 
-
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
-
-    def __repr__(self):
-        return "%d" % self.val + (self.next.__repr__() if self.next is not None else "")
+from ListNode import ListNode, l
 
 class Solution:
     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
@@ -34,12 +27,6 @@ class Solution:
 
 solution = Solution()
 
-def makeList(nums: list[int]) -> Optional[ListNode]:
-    node = None
-    for n in nums:
-        node = ListNode(n, node)
-    return node
-
 # print(makeList([1, 2, 3]))
 # print(solution.addTwoNumbers(makeList([3, 4, 2]), makeList([4, 6, 5])))
-print(solution.addTwoNumbers(makeList([9,9,9,9,9,9,9]), makeList([9,9,9,9])))
+print(solution.addTwoNumbers(l([9,9,9,9,9,9,9]), l([9,9,9,9])))
